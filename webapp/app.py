@@ -1,13 +1,13 @@
-from flask import Flask
+from flask import Flask,render_template
 app=Flask(__name__)
 @app.route("/")
 def index():
-    return "welcome to my website"
+    return render_template("index.html")
 @app.route("/home")
 def ind():
-    return "welcome"
+    return render_template("page2.html")
 @app.route("/about")
 def ins():
-    return "welcome to home page"
+    return "welcome to about page"
 if(__name__=="__main__"):
     app.run(debug="true")
